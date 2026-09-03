@@ -14,6 +14,16 @@
   --font-accent:  "Caveat", cursive;
 }
 
+/* ─── Dark Mode Tokens ───────────────────────────────────────── */
+.dark {
+  --bg:        #1A1410;
+  --ink:       #F0EBD8;
+  --marigold:  #E8893A;
+  --forest:    #5A8A5E;
+  --berry:     #D44D7A;
+  --border:    #3D3025;
+}
+
 /* ─── Base Reset ─────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;

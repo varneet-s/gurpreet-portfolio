@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { List, X } from "@phosphor-icons/react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const links = [
   { href: "/", label: "Home" },
@@ -63,47 +64,50 @@ export default function Nav() {
             GJ
           </Link>
 
-          {/* Desktop links */}
-          <ul
-            style={{
-              display: "flex",
-              gap: "36px",
-              listStyle: "none",
-              alignItems: "center",
-            }}
-            className="hidden-mobile"
-          >
-            {links.map(({ href, label }) => {
-              const isActive = pathname === href;
-              return (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    className={`nav-link${isActive ? " active" : ""}`}
-                  >
-                    {label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          {/* Desktop: links + theme toggle */}
+          <div style={{ display: "flex", alignItems: "center", gap: "24px" }} className="hidden-mobile">
+            <ul
+              style={{
+                display: "flex",
+                gap: "36px",
+                listStyle: "none",
+                alignItems: "center",
+              }}
+            >
+              {links.map(({ href, label }) => {
+                const isActive = pathname === href;
+                return (
+                  <li key={href}>
+                    <Link
+                      href={href}
+                      className={`nav-link${isActive ? " active" : ""}`}
+                    >
+                      {label}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+            <ThemeToggle />
+          </div>
 
-          {/* Mobile hamburger */}
-          <button
-            onClick={() => setOpen(!open)}
-            aria-label={open ? "Close menu" : "Open menu"}
-            style={{
-              display: "none",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: "var(--ink)",
-              padding: "4px",
-            }}
-            className="show-mobile"
-          >
-            {open ? <X size={22} /> : <List size={22} />}
-          </button>
+          {/* Mobile: theme toggle + hamburger */}
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }} className="show-mobile">
+            <ThemeToggle />
+            <button
+              onClick={() => setOpen(!open)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: "var(--ink)",
+                padding: "4px",
+              }}
+            >
+              {open ? <X size={22} /> : <List size={22} />}
+            </button>
+          </div>
         </nav>
       </header>
 
