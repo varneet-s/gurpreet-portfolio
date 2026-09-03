@@ -47,25 +47,25 @@ const timeline = [
 // Guldasta photo grid
 const photos = [
   {
-    src: "https://picsum.photos/seed/guldasta-bouquet/600/800",
+    src: "/guldasta.jpg",
     alt: "Guldasta — close-up of handcrafted velvet flower bouquet in marigold and pink",
     polaroid: true,
     tilt: "neg" as const,
   },
   {
-    src: "https://picsum.photos/seed/guldasta-festival/800/600",
+    src: "/guldasta.jpg",
     alt: "Kala Gali Ludhiana Art Festival — Guldasta stall with velvet flower arrangements",
     polaroid: false,
     tilt: "none" as const,
   },
   {
-    src: "https://picsum.photos/seed/guldasta-customer/600/600",
+    src: "/guldasta.jpg",
     alt: "Customer selecting a handcrafted Guldasta bouquet at the market stall",
     polaroid: false,
     tilt: "none" as const,
   },
   {
-    src: "https://picsum.photos/seed/guldasta-outdoor/800/600",
+    src: "/guldasta.jpg",
     alt: "Guldasta founders outdoors with velvet flower arrangements — candid shot",
     polaroid: true,
     tilt: "pos" as const,

@@ -174,7 +174,7 @@ export default function Home() {
             >
               <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
                 <Image
-                  src="https://picsum.photos/seed/guldasta-flowers/800/600"
+                  src="/guldasta.jpg"
                   alt="Guldasta — handcrafted velvet flower arrangement in marigold and pink"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
