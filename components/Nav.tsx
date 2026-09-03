@@ -24,7 +24,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // close mobile menu on route change
   useEffect(() => { setOpen(false); }, [pathname]);
 
   return (
@@ -36,7 +35,7 @@ export default function Nav() {
           zIndex: 50,
           backgroundColor: "var(--bg)",
           borderBottom: scrolled ? "1px solid var(--border)" : "1px solid transparent",
-          transition: "border-color 200ms ease",
+          transition: "border-color 200ms ease, background-color 200ms ease",
         }}
       >
         <nav
@@ -64,35 +63,22 @@ export default function Nav() {
             GJ
           </Link>
 
-          {/* Desktop: links + theme toggle */}
-          <div style={{ display: "flex", alignItems: "center", gap: "24px" }} className="hidden-mobile">
-            <ul
-              style={{
-                display: "flex",
-                gap: "36px",
-                listStyle: "none",
-                alignItems: "center",
-              }}
-            >
-              {links.map(({ href, label }) => {
-                const isActive = pathname === href;
-                return (
-                  <li key={href}>
-                    <Link
-                      href={href}
-                      className={`nav-link${isActive ? " active" : ""}`}
-                    >
-                      {label}
-                    </Link>
-                  </li>
-                );
-              })}
+          {/* Desktop: nav links + theme toggle — hidden on mobile */}
+          <div className="nav-desktop">
+            <ul style={{ display: "flex", gap: "36px", listStyle: "none", alignItems: "center" }}>
+              {links.map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className={`nav-link${pathname === href ? " active" : ""}`}>
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <ThemeToggle />
           </div>
 
-          {/* Mobile: theme toggle + hamburger */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }} className="show-mobile">
+          {/* Mobile: theme toggle + hamburger — hidden on desktop */}
+          <div className="nav-mobile">
             <ThemeToggle />
             <button
               onClick={() => setOpen(!open)}
@@ -103,6 +89,8 @@ export default function Nav() {
                 cursor: "pointer",
                 color: "var(--ink)",
                 padding: "4px",
+                display: "flex",
+                alignItems: "center",
               }}
             >
               {open ? <X size={22} /> : <List size={22} />}
@@ -145,9 +133,19 @@ export default function Nav() {
       )}
 
       <style>{`
+        .nav-desktop {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+        }
+        .nav-mobile {
+          display: none;
+          align-items: center;
+          gap: 12px;
+        }
         @media (max-width: 640px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile   { display: block !important; }
+          .nav-desktop { display: none; }
+          .nav-mobile  { display: flex; }
         }
       `}</style>
     </>
