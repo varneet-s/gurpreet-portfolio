@@ -6,6 +6,7 @@ import ScrollFadeUp from "@/components/ScrollFadeUp";
 import { DownloadSimple } from "@phosphor-icons/react";
 
 const education = [
+  { course: "MBA, Business Analytics", institute: "Deakin University, Ahmedabad", year: "2026–" },
   { course: "BCOM (Hons), Marketing", institute: "S.A.C.C.M, Panjab University", year: "2026" },
   { course: "XII — Commerce", institute: "BCM Arya Model, C.B.S.E.", year: "2023" },
   { course: "X — General", institute: "BCM Arya Model, C.B.S.E.", year: "2021" },
