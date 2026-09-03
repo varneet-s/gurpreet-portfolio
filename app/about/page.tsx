@@ -162,7 +162,7 @@ export default function About() {
           >
             <div style={{ position: "relative", aspectRatio: "3/4", overflow: "hidden" }}>
               <Image
-                src="https://picsum.photos/seed/gurpreet-about-full/600/800"
+                src="/gurpreet.jpeg"
                 alt="Gurpreet Kaur Jodhka — about portrait"
                 fill
                 sizes="(max-width: 768px) 100vw, 280px"

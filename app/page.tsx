@@ -98,7 +98,7 @@ export default function Home() {
           >
             <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", overflow: "hidden" }}>
               <Image
-                src="https://picsum.photos/seed/gurpreet-portrait/600/800"
+                src="/gurpreet.jpeg"
                 alt="Gurpreet Kaur Jodhka — portrait"
                 fill
                 sizes="(max-width: 768px) 90vw, 340px"
@@ -317,7 +317,7 @@ export default function Home() {
           >
             <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden" }}>
               <Image
-                src="https://picsum.photos/seed/gurpreet-about/400/400"
+                src="/gurpreet.jpeg"
                 alt="Gurpreet Kaur Jodhka"
                 fill
                 sizes="200px"

@@ -205,7 +205,7 @@ export default function Contact() {
           >
             <div style={{ position: "relative", aspectRatio: "4/5", overflow: "hidden" }}>
               <Image
-                src="https://picsum.photos/seed/gurpreet-contact/480/600"
+                src="/gurpreet.jpeg"
                 alt="Gurpreet Kaur Jodhka — contact portrait"
                 fill
                 sizes="280px"
