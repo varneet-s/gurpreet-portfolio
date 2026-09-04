@@ -19,22 +19,23 @@ export const articles: Article[] = [
     slug: 'starting-guldasta-brand-before-mba',
     num: '#04',
     date: 'JUN 2026',
-    title: 'Starting Guldasta: Building a Brand Before Business School',
-    source: 'Guldasta Startup',
+    title: 'Starting Guldasta: Building a Pipecleaner Floral Brand Before MBA',
+    source: 'Guldasta Venture',
     type: 'ARTICLE',
     frameColor: 'pink',
     description:
-      'We launched with handcrafted velvet flowers, zero paid ads, and our own savings. 100+ orders later, here is what retail reality taught me.',
+      'I started Guldasta in Jan 2026 with my brother Gursimran. ₹20k+ revenue, 30+ custom bouquets & pots, 56–66% margins, and selling out at the 20,000-footfall Kala Gali exhibition.',
     contentHtml: `
-      <p>I grew up knowing I wanted to build something of my own. Before finishing my undergraduate degree, my brother and I co-founded <em>Guldasta</em> — a handcrafted velvet floral brand.</p>
-      <p>We ran it lean, made it work, and nearly sold out our inventory at our very first public exhibition stall at Kala Gali, Ludhiana.</p>
-      <p>Here are three lessons that no textbook could have taught me:</p>
+      <p>I started Guldasta in January 2026. I always thought: <em>why gift an ordinary bouquet to someone on special occasions when it withers away in a few days?</em></p>
+      <p>Searching deeper into alternative floral art forms, I found out that everlasting flowers could be made with the help of pipecleaners. I started this venture with my brother, <strong>Gursimran</strong>.</p>
+      <p>The business did well and was profitable from the start. Key highlights from our 5-month journey:</p>
       <ul>
-        <li><strong>Customer trust is earned in execution, not planning:</strong> People don't buy ideas; they buy finished craftsmanship, reliable packaging, and immediate attentiveness.</li>
-        <li><strong>Cash flow discipline from Day One:</strong> Managing raw materials, unit economics, and margins with our own hard-earned money forced strict accountability.</li>
-        <li><strong>Direct feedback changes everything:</strong> Standing at our market stall and watching customers touch the velvet petals taught us more about product appeal in 3 hours than weeks of speculation.</li>
+        <li><strong>Kala Gali Exhibition Sell-Out:</strong> We put up a stall at Kala Gali &mdash; an exhibition specially curated for young artists in Ludhiana with a footfall of ~20,000 people &mdash; and we completely sold out our inventory.</li>
+        <li><strong>Financials &amp; Scale:</strong> We generated &#8377;20k+ in total revenue, selling 30+ customized bouquets and decorative flower pots within 5 months.</li>
+        <li><strong>Strong Unit Margins:</strong> We maintained profit margins of 56%&ndash;66% per order, despite raw materials not being cheap or easily accessible in the market. Gursimran helped source quality supplies from wholesale markets at low rates.</li>
+        <li><strong>PAN-India Reach:</strong> We popularized Guldasta on Instagram (@guldasta.inn) and within 3 months expanded to delivering across India. Our audience was primarily Gen Z and young couples, though the craft was also loved by many parents.</li>
       </ul>
-      <p>When my brother moved for college, we closed this chapter. But Guldasta gave me definitive proof: I loved understanding how businesses scale.</p>
+      <p>The reason behind closing Guldasta was practical: I had to move to Ahmedabad for my MBA at Deakin University, and operating remotely meant I wouldn't have my brother's on-ground help sourcing materials. Guldasta proved that hands-on execution and commercial instinct are the greatest preparation for business school.</p>
     `,
     externalLink: {
       label: 'View Guldasta on Instagram ↗',

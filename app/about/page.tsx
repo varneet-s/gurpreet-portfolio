@@ -58,25 +58,20 @@ export default function AboutPage() {
                 describe them.
               </p>
               <p>
-                Before finishing my degree, I co-founded{' '}
+                Before finishing my degree, I started questioning why special occasions should be marked with ordinary perishable bouquets that wither away in days. Searching deeper into alternative crafts, I discovered that everlasting flowers could be made with pipecleaners. With my brother{' '}
+                <strong>Gursimran</strong>, we co-founded{' '}
                 <Link href="/work/guldasta/" style={{ textDecoration: 'underline', color: 'var(--copper)' }}>
                   Guldasta
                 </Link>
-                , a handcrafted velvet flower brand with my brother. We ran it lean,
-                handled all packaging and direct consumer sales, and nearly sold out
-                our entire inventory at our first public exhibition at Kala Gali, Ludhiana.
+                . We sourced materials at wholesale rates, maintained 56&ndash;66% margins, sold 30+ custom bouquets and pots across India, and completely sold out our stall inventory at the 20,000-footfall Kala Gali exhibition in Ludhiana.
               </p>
             </div>
             <div>
               <p>
-                When my brother moved for college, we closed that chapter. But the
-                venture had already answered my fundamental question: I wanted to
-                understand how organisations grow, not just what products they sell.
+                When I had to relocate to Ahmedabad for my MBA at Deakin University, we decided to wrap up the venture &mdash; as I would no longer have Gursimran&apos;s on-ground sourcing partnership in the Punjab markets.
               </p>
               <p>
-                That is why I&apos;m currently pursuing an MBA at Deakin University in
-                GIFT City, Ahmedabad &mdash; building the quantitative and strategic
-                layer on top of the operational foundation I already created.
+                Running Guldasta gave me definitive commercial proof: I loved understanding unit economics, customer demand, and operations. Now at Deakin University in GIFT City, Ahmedabad, I am building the quantitative analytics layer on top of that hands-on foundation.
               </p>
             </div>
           </div>

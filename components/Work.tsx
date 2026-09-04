@@ -23,13 +23,13 @@ const projects: ProjectBlogItem[] = [
   {
     id: 'guldasta',
     fromMonthYear: 'Jan 2026',
-    toMonthYear: 'Jun 2026',
+    toMonthYear: 'May 2026',
     client: 'GULDASTA',
     role: 'Co-Founder & Operations',
     category: 'D2C VENTURE',
-    title: 'Building a Handcrafted D2C Floral Brand to 100+ Orders',
-    dek: 'Co-founded and scaled a self-funded velvet floral startup from zero to 100+ orders, ₹10k+ revenue, and an exhibition stall at the Kala Gali Art Festival in Ludhiana, managing direct customer engagement, packaging, and supply operations.',
-    tools: ['D2C BRANDING', 'SUPPLY CHAIN', 'SOCIAL MARKETING', 'EVENT SALES'],
+    title: 'Bootstrapping a Handcrafted Pipecleaner Floral Venture',
+    dek: 'Started with my brother Gursimran in January 2026 crafting everlasting flowers using pipecleaners. Within 5 months: 30+ bespoke bouquets and flower pots sold, ₹20k+ revenue, 56–66% margins, a sell-out at the 20,000-footfall Kala Gali exhibition, and scaling to PAN-India delivery.',
+    tools: ['PIPECLEANER CRAFT', '56-66% MARGINS', 'PAN-INDIA SHIPPING', 'KALA GALI EXHIBITION'],
     href: '/work/guldasta/',
     previewImg: '/guldasta.jpg',
     isComingSoon: false,
@@ -73,9 +73,9 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 'guldasta',
-    company: 'Guldasta (Self-Funded Startup)',
+    company: 'Guldasta (Handcrafted Floral Venture)',
     role: 'Co-Founder & Operations Lead',
-    dates: 'January 2026 — June 2026',
+    dates: 'January 2026 — May 2026',
     href: '/work/guldasta/',
   },
   {
@@ -108,20 +108,20 @@ interface MetricStat {
 
 const metrics: MetricStat[] = [
   {
-    value: '100+',
-    label: 'Customised handcrafted velvet flower orders fulfilled',
+    value: '₹20k+',
+    label: 'Gross revenue generated within 5-month bootstrap run',
   },
   {
-    value: '₹10k+',
-    label: 'Direct revenue generated during 6-month bootstrap run',
+    value: '30+',
+    label: 'Customised bouquets & flower pots handcrafted and sold',
   },
   {
-    value: '200+',
-    label: 'Direct customers and festival exhibition visitors reached',
+    value: '56–66%',
+    label: 'Profit margin maintained per order across PAN-India deliveries',
   },
   {
-    value: '1,000+',
-    label: 'Attendees coordinated across college events and convocation',
+    value: '20,000',
+    label: 'Visitor footfall at Kala Gali exhibition where stall sold out',
   },
 ];
 
