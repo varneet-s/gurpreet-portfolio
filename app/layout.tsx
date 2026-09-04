@@ -7,7 +7,7 @@ import ScrollReveal from '@/components/ScrollReveal';
 export const metadata: Metadata = {
   metadataBase: new URL('https://gurpreetjodhka.com'),
   title: {
-    default: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    default: 'Gurpreet Kaur Jodhka - Business Analyst',
     template: '%s | Gurpreet Kaur Jodhka',
   },
   description:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     icon: '/assets/logo-wordmark.svg',
   },
   openGraph: {
-    title: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    title: 'Gurpreet Kaur Jodhka - Business Analyst',
     description:
       'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
     url: 'https://gurpreetjodhka.com',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    title: 'Gurpreet Kaur Jodhka - Business Analyst',
     description:
       'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
     images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],

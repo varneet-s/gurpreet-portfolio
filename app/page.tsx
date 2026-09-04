@@ -4,17 +4,19 @@ import type { Metadata } from 'next';
 import { articles } from '@/lib/data/writing';
 
 export const metadata: Metadata = {
-  title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+  title: {
+    absolute: 'Gurpreet Kaur Jodhka - Business Analyst',
+  },
   description:
     'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
   openGraph: {
-    title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+    title: 'Gurpreet Kaur Jodhka - Business Analyst',
     description:
       'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
     images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
-    title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+    title: 'Gurpreet Kaur Jodhka - Business Analyst',
     description:
       'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
     images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
