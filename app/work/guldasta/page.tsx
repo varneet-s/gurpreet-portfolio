@@ -4,17 +4,17 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Guldasta Business Documentation — Gurpreet Kaur Jodhka',
+  title: 'Guldasta: Bootstrapping a Handcrafted D2C Startup — Gurpreet Kaur Jodhka',
   description:
-    'A 5-month business documentation of Guldasta: pipecleaner handcrafted floral venture founded with brother Gursimran, ₹20k+ revenue, Kala Gali sell-out, 56-66% margins, and PAN-India delivery.',
+    'A 5-month business documentation of Guldasta: handcrafted D2C startup founded with brother Gursimran, ₹20k+ revenue, Kala Gali sell-out, 56-66% margins, and PAN-India delivery.',
   openGraph: {
-    title: 'Guldasta Business Documentation — Gurpreet Kaur Jodhka',
+    title: 'Guldasta: Bootstrapping a Handcrafted D2C Startup — Gurpreet Kaur Jodhka',
     description:
       'The 5-month story of Guldasta: ₹20k+ revenue, 30+ custom bouquets & pots sold, Kala Gali exhibition sell-out, and PAN-India delivery.',
     images: ['https://gurpreetjodhka.com/assets/guldasta-preview.jpg'],
   },
   twitter: {
-    title: 'Guldasta Business Documentation — Gurpreet Kaur Jodhka',
+    title: 'Guldasta: Bootstrapping a Handcrafted D2C Startup — Gurpreet Kaur Jodhka',
     description:
       'The 5-month story of Guldasta: ₹20k+ revenue, 30+ custom bouquets & pots sold, Kala Gali exhibition sell-out, and PAN-India delivery.',
     images: ['https://gurpreetjodhka.com/assets/guldasta-preview.jpg'],
@@ -35,7 +35,7 @@ export default function GuldastaPage() {
             Back to Projects
           </Link>
           <h1 className="hero-title cs-hero-title">
-            <span className="highlight">Guldasta: Handcrafted Pipecleaner Floral Venture</span>
+            <span className="highlight">Guldasta: Bootstrapping a Handcrafted D2C Startup</span>
           </h1>
 
           <p className="hero-subtitle cs-hero-subtitle">
@@ -54,7 +54,7 @@ export default function GuldastaPage() {
             <div className="cs-meta-item">
               <span className="cs-meta-label">Craft &amp; Product Model</span>
               <div className="cs-meta-val cs-meta-tools-list">
-                <span className="cs-meta-tool-tag">Pipecleaner Floral Craft</span>
+                <span className="cs-meta-tool-tag">Handcrafted Floral Brand</span>
                 <span className="cs-meta-tool-tag">Bespoke Bouquets &amp; Pots</span>
                 <span className="cs-meta-tool-tag">56&ndash;66% Margins</span>
                 <span className="cs-meta-tool-tag">Wholesale Market Sourcing</span>

@@ -19,8 +19,8 @@ export const articles: Article[] = [
     slug: 'starting-guldasta-brand-before-mba',
     num: '#04',
     date: 'JUN 2026',
-    title: 'Starting Guldasta: Building a Pipecleaner Floral Brand Before MBA',
-    source: 'Guldasta Venture',
+    title: 'Starting Guldasta: Bootstrapping a Handcrafted D2C Startup Before MBA',
+    source: 'Guldasta Startup',
     type: 'ARTICLE',
     frameColor: 'pink',
     description:

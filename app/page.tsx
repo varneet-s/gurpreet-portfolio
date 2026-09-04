@@ -43,7 +43,7 @@ export default function HomePage() {
           </h1>
 
           <p className="sub">
-            Marketing graduate who bootstrapped Guldasta with her brother Gursimran &mdash; crafting pipecleaner flowers to &#8377;20k+ revenue before moving to Ahmedabad for an MBA at Deakin University.
+            Marketing graduate who bootstrapped Guldasta with her brother Gursimran &mdash; scaling a handcrafted D2C startup to &#8377;20k+ revenue before moving to Ahmedabad for an MBA at Deakin University.
           </p>
 
           <div className="hero-cta">
@@ -70,8 +70,8 @@ export default function HomePage() {
             <Link href="/work/guldasta/" className="work-list-row">
               <div className="work-list-num">01</div>
               <div className="work-list-content">
-                <h3 className="work-list-title">Guldasta Pipecleaner Floral Venture</h3>
-                <div className="work-list-tags">PIPECLEANER CRAFT &middot; &#8377;20K+ REVENUE &middot; KALA GALI SELL-OUT</div>
+                <h3 className="work-list-title">Guldasta: Bootstrapping a Handcrafted D2C Startup</h3>
+                <div className="work-list-tags">HANDCRAFTED D2C &middot; &#8377;20K+ REVENUE &middot; KALA GALI SELL-OUT</div>
               </div>
             </Link>
 
