@@ -62,14 +62,14 @@ export default function AboutPage() {
                 <Link href="/work/guldasta/" style={{ textDecoration: 'underline', color: 'var(--copper)' }}>
                   Guldasta
                 </Link>
-                , a handcrafted velvet flower brand with my sister. We ran it lean,
+                , a handcrafted velvet flower brand with my brother. We ran it lean,
                 handled all packaging and direct consumer sales, and nearly sold out
                 our entire inventory at our first public exhibition at Kala Gali, Ludhiana.
               </p>
             </div>
             <div>
               <p>
-                When my sister moved for college, we closed that chapter. But the
+                When my brother moved for college, we closed that chapter. But the
                 venture had already answered my fundamental question: I wanted to
                 understand how organisations grow, not just what products they sell.
               </p>

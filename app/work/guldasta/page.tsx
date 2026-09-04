@@ -247,7 +247,7 @@ export default function GuldastaPage() {
             </div>
 
             <p>
-              When my co-founder moved for higher studies, we decided to intentionally wrap up the venture. But the five months running Guldasta served as a transformative commercial proving ground.
+              When my brother and co-founder moved for higher studies, we decided to intentionally wrap up the venture. But the five months running Guldasta served as a transformative commercial proving ground.
             </p>
             <p>
               It proved that I could spot market appetite, negotiate materials, handle customers, and build positive cash-flow. More importantly, it made me realize that to solve larger enterprise-scale problems, I needed systematic training in data analytics, operational supply chains, and strategic marketing.

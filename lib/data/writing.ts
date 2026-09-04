@@ -26,7 +26,7 @@ export const articles: Article[] = [
     description:
       'We launched with handcrafted velvet flowers, zero paid ads, and our own savings. 100+ orders later, here is what retail reality taught me.',
     contentHtml: `
-      <p>I grew up knowing I wanted to build something of my own. Before finishing my undergraduate degree, my sister and I co-founded <em>Guldasta</em> — a handcrafted velvet floral brand.</p>
+      <p>I grew up knowing I wanted to build something of my own. Before finishing my undergraduate degree, my brother and I co-founded <em>Guldasta</em> — a handcrafted velvet floral brand.</p>
       <p>We ran it lean, made it work, and nearly sold out our inventory at our very first public exhibition stall at Kala Gali, Ludhiana.</p>
       <p>Here are three lessons that no textbook could have taught me:</p>
       <ul>
@@ -34,7 +34,7 @@ export const articles: Article[] = [
         <li><strong>Cash flow discipline from Day One:</strong> Managing raw materials, unit economics, and margins with our own hard-earned money forced strict accountability.</li>
         <li><strong>Direct feedback changes everything:</strong> Standing at our market stall and watching customers touch the velvet petals taught us more about product appeal in 3 hours than weeks of speculation.</li>
       </ul>
-      <p>When my sister moved for college, we closed this chapter. But Guldasta gave me definitive proof: I loved understanding how businesses scale.</p>
+      <p>When my brother moved for college, we closed this chapter. But Guldasta gave me definitive proof: I loved understanding how businesses scale.</p>
     `,
     externalLink: {
       label: 'View Guldasta on Instagram ↗',
