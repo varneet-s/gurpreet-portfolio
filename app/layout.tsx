@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: 'Gurpreet Kaur Jodhka Portfolio',
     images: [
       {
-        url: '/gurpreet.jpeg',
+        url: 'https://gurpreetjodhka.com/assets/og-preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Gurpreet Kaur Jodhka',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Gurpreet Kaur Jodhka — MBA & Marketing',
     description:
       'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 

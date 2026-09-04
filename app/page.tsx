@@ -11,11 +11,13 @@ export const metadata: Metadata = {
     title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
     description:
       'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
     title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
     description:
       'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 

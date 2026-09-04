@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Let's Talk | Gurpreet Kaur Jodhka",
     description:
       'Get in touch with Gurpreet Kaur Jodhka — MBA Candidate at Deakin University, Ahmedabad.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
     title: "Let's Talk | Gurpreet Kaur Jodhka",
     description:
       'Get in touch with Gurpreet Kaur Jodhka — MBA Candidate at Deakin University, Ahmedabad.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 

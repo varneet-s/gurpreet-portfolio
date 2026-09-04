@@ -27,12 +27,12 @@ export async function generateMetadata({
     openGraph: {
       title: `${article.title} — Gurpreet Kaur Jodhka`,
       description: article.description,
-      images: ['/gurpreet.jpeg'],
+      images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
     },
     twitter: {
       title: `${article.title} — Gurpreet Kaur Jodhka`,
       description: article.description,
-      images: ['/gurpreet.jpeg'],
+      images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
     },
   };
 }

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     title: 'Work & Projects | Gurpreet Kaur Jodhka',
     description:
       'Featured startup ventures, commercial operations, and leadership case studies by Gurpreet Kaur Jodhka.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
     title: 'Work & Projects | Gurpreet Kaur Jodhka',
     description:
       'Featured startup ventures, commercial operations, and leadership case studies by Gurpreet Kaur Jodhka.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 

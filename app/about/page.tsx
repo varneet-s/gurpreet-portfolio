@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     title: 'About Me & My Journey | Gurpreet Kaur Jodhka',
     description:
       'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
     title: 'About Me & My Journey | Gurpreet Kaur Jodhka',
     description:
       'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 

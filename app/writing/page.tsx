@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     title: 'Blog & Articles | Gurpreet Kaur Jodhka',
     description:
       'Writing about startup execution, commercial marketing, and business strategy.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
   twitter: {
     title: 'Blog & Articles | Gurpreet Kaur Jodhka',
     description:
       'Writing about startup execution, commercial marketing, and business strategy.',
-    images: ['/gurpreet.jpeg'],
+    images: ['https://gurpreetjodhka.com/assets/og-preview.jpg'],
   },
 };
 
