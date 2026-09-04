@@ -76,7 +76,7 @@ const experiences: ExperienceItem[] = [
     company: 'Guldasta (Self-Funded Startup)',
     role: 'Co-Founder & Operations Lead',
     dates: 'January 2026 — June 2026',
-    href: '/work/',
+    href: '/work/guldasta/',
   },
   {
     id: 'convocation',
