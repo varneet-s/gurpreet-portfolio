@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="none">
+  <rect width="100" height="100" rx="16" fill="#002B49" />
+  <!-- Deakin Geometric 'D' Motif -->
+  <path d="M28 24 H52 C68 24 76 34 76 50 C76 66 68 76 52 76 H28 Z" fill="#00DE9A" />
+  <path d="M42 38 H50 C60 38 64 43 64 50 C64 57 60 62 50 62 H42 Z" fill="#002B49" />
+  <circle cx="36" cy="50" r="3" fill="#FFFFFF" />
+</svg>

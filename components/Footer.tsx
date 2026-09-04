@@ -1,89 +1,66 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-
-const footerLinks = [
-  { href: "/about", label: "About" },
-  { href: "/work", label: "Work" },
-  { href: "/contact", label: "Contact" },
-];
+import React from 'react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer
-      style={{
-        borderTop: "1px solid var(--border)",
-        backgroundColor: "var(--bg)",
-        padding: "40px 24px",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: "20px",
-        }}
-      >
-        {/* Left — wordmark */}
-        <Link
-          href="/"
-          style={{
-            fontFamily: "var(--font-fraunces), Georgia, serif",
-            fontSize: "1.1rem",
-            fontWeight: 500,
-            color: "var(--ink)",
-          }}
-        >
-          Gurpreet Kaur Jodhka
-        </Link>
+    <footer id="main-footer" className="site-footer">
+      <div className="local-footer-banner">
+        <div className="local-footer-bg-title">GURPREET</div>
 
-        {/* Center — nav repeat */}
-        <nav
-          style={{
-            display: "flex",
-            gap: "28px",
-            listStyle: "none",
-            flexWrap: "wrap",
-          }}
-        >
-          {footerLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.85rem",
-                color: "var(--ink)",
-                opacity: 0.6,
-                transition: "opacity 150ms ease",
-              }}
-              onMouseEnter={(e) =>
-                ((e.target as HTMLElement).style.opacity = "1")
-              }
-              onMouseLeave={(e) =>
-                ((e.target as HTMLElement).style.opacity = "0.6")
-              }
+        <div className="local-footer-content">
+          <div className="local-footer-avatar-wrap">
+            <img
+              src="/gurpreet.jpeg"
+              alt="Gurpreet Kaur Jodhka, Portrait"
+              className="local-footer-avatar-img"
+              width={140}
+              height={140}
+              style={{ objectFit: 'cover' }}
+            />
+            <button
+              type="button"
+              className="local-footer-email-badge"
+              onClick={(e) => e.preventDefault()}
             >
-              {label}
-            </Link>
-          ))}
-        </nav>
+              LET&apos;S TALK &rarr;
+            </button>
+          </div>
 
-        {/* Right — credit */}
-        <p
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.78rem",
-            color: "var(--ink)",
-            opacity: 0.4,
-          }}
-        >
-          &copy; 2026 Gurpreet Kaur Jodhka
-        </p>
+          <div className="local-footer-bottom-bar">
+            <a
+              href="https://www.linkedin.com/in/gurpreet-kaur-168303215/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="local-footer-pill"
+            >
+              LINKEDIN
+            </a>
+            <a
+              href="https://www.instagram.com/guldasta.inn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="local-footer-pill"
+            >
+              INSTAGRAM
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="local-footer-pill"
+            >
+              RESUME
+            </a>
+            <a
+              href="mailto:gurpreet@gurpreetjodhka.com"
+              className="local-footer-pill"
+            >
+              EMAIL
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -1,265 +1,43 @@
-@import "tailwindcss";
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@700,600,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&family=Bitter:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
 
-/* ─── Design Tokens ──────────────────────────────────────────── */
-:root {
-  --bg:        #F6F1E4;
-  --ink:       #241C14;
-  --marigold:  #E07A2C;
-  --forest:    #2F4A32;
-  --berry:     #C6396B;
-  --border:    #D8B98C;
+@import '../css/tokens.css';
+@import '../css/typography.css';
+@import '../css/styles.css';
+@import '../css/design-system.css';
 
-  --font-heading: "Fraunces", Georgia, serif;
-  --font-body:    "Outfit", system-ui, sans-serif;
-  --font-accent:  "Caveat", cursive;
+/* Custom adjustments for Gurpreet */
+.hero-headline {
+  max-width: 100%;
 }
 
-/* ─── Dark Mode Tokens ───────────────────────────────────────── */
-.dark {
-  --bg:        #1A1410;
-  --ink:       #F0EBD8;
-  --marigold:  #E8893A;
-  --forest:    #5A8A5E;
-  --berry:     #D44D7A;
-  --border:    #3D3025;
+.hero-headline .line {
+  font-size: clamp(2rem, 5.2vw, 5.2rem) !important;
+  line-height: 0.96 !important;
 }
 
-/* ─── Base Reset ─────────────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.hero-headline .highlight {
+  font-size: clamp(1.4rem, 3.85vw, 3.9rem) !important;
+  max-width: 100%;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
 }
 
-html {
-  scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  background-color: var(--bg);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* ─── Typography Helpers ─────────────────────────────────────── */
-h1, h2, h3, h4, h5 {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--ink);
-}
-
-p {
-  max-width: 600px;
-  line-height: 1.7;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ─── Inverted Section ───────────────────────────────────────── */
-.section-inverted {
-  background-color: var(--ink);
-  color: var(--bg);
-}
-
-.section-inverted h1,
-.section-inverted h2,
-.section-inverted h3,
-.section-inverted p {
-  color: var(--bg);
-}
-
-/* ─── Skeleton Loader ────────────────────────────────────────── */
-@keyframes skeleton-pulse {
-  0%, 100% { opacity: 1; }
-  50%       { opacity: 0.4; }
-}
-
-.skeleton {
-  background-color: var(--border);
-  animation: skeleton-pulse 1.5s ease-in-out infinite;
-  border-radius: 4px;
-}
-
-/* ─── Scroll Fade-Up ─────────────────────────────────────────── */
-.fade-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 200ms ease-out, transform 200ms ease-out;
-}
-
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ─── Reduced Motion ─────────────────────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  .fade-up,
-  .fade-up.visible {
-    opacity: 1;
-    transform: none;
-    transition: none;
+@media (max-width: 768px) {
+  .hero-headline .line {
+    font-size: clamp(1.8rem, 9.5vw, 2.8rem) !important;
   }
-  .skeleton {
-    animation: none;
+  .hero-headline .highlight {
+    font-size: clamp(1.1rem, 5.2vw, 2.1rem) !important;
   }
 }
 
-/* ─── Polaroid Photo Frame ───────────────────────────────────── */
-.polaroid {
-  background: #fff;
-  padding: 10px 10px 28px;
-  box-shadow: 0 2px 12px rgba(36, 28, 20, 0.12);
+.local-footer-bg-title {
+  font-size: clamp(3.2rem, 15.5vw, 17vw) !important;
 }
 
-.polaroid-tilt-neg {
-  transform: rotate(-2deg);
-}
-
-.polaroid-tilt-pos {
-  transform: rotate(2deg);
-}
-
-/* ─── Nav Active Underline ───────────────────────────────────── */
-.nav-link {
-  position: relative;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  color: var(--ink);
-  transition: color 150ms ease;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--berry);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
-.nav-link.active::after {
-  transform: scaleX(1);
-  background-color: var(--marigold);
-}
-
-/* ─── Pill Tags ──────────────────────────────────────────────── */
-.pill {
-  display: inline-block;
-  padding: 4px 14px;
-  border: 1.5px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--ink);
-  font-family: var(--font-body);
-  letter-spacing: 0.02em;
-}
-
-/* ─── Stat Chip ──────────────────────────────────────────────── */
-.stat-chip {
-  border: 1.5px solid var(--border);
-  padding: 18px 22px;
-  border-radius: 4px;
-  position: relative;
-}
-
-.stat-chip .stat-number {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--marigold);
-  line-height: 1;
-}
-
-.stat-chip .stat-label {
-  font-size: 0.82rem;
-  color: var(--ink);
-  opacity: 0.7;
-  margin-top: 4px;
-}
-
-/* ─── Section Divider ────────────────────────────────────────── */
-.section-divider {
-  width: 100%;
-  height: 40px;
-  overflow: visible;
-}
-
-/* ─── Download Button ────────────────────────────────────────── */
-.btn-outline {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
-  border: 1.5px solid var(--ink);
-  font-family: var(--font-body);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--ink);
-  letter-spacing: 0.04em;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: background-color 150ms ease, color 150ms ease;
-}
-
-.btn-outline:hover {
-  background-color: var(--ink);
-  color: var(--bg);
-}
-
-.btn-outline:active {
-  transform: translateY(1px) scale(0.99);
-}
-
-/* ─── Timeline ───────────────────────────────────────────────── */
-.timeline-entry {
-  position: relative;
-  padding-left: 24px;
-}
-
-.timeline-entry::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--marigold);
-}
-
-.timeline-entry + .timeline-entry {
-  margin-top: 40px;
-}
-
-.timeline-entry::after {
-  content: '';
-  position: absolute;
-  left: 3.5px;
-  top: 18px;
-  width: 1px;
-  height: calc(100% + 22px);
-  background-color: var(--border);
-}
-
-.timeline-entry:last-child::after {
-  display: none;
+@media (max-width: 768px) {
+  .local-footer-bg-title {
+    font-size: clamp(2.6rem, 15.5vw, 4.8rem) !important;
+  }
 }

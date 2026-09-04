@@ -1,422 +1,241 @@
-"use client";
+import React from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { articles } from '@/lib/data/writing';
 
-import Link from "next/link";
-import Image from "next/image";
-import ScrollFadeUp from "@/components/ScrollFadeUp";
-import SprigLeaf from "@/components/illustrations/SprigLeaf";
-import { ArrowRight } from "@phosphor-icons/react";
+export const metadata: Metadata = {
+  title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+  description:
+    'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
+  openGraph: {
+    title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+    description:
+      'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
+  },
+  twitter: {
+    title: 'Gurpreet Kaur Jodhka — MBA Candidate & Marketer',
+    description:
+      'Marketing graduate and former founder of Guldasta, now pursuing an MBA at Deakin University, Ahmedabad. Specialized in brand building, event operations, and business analytics.',
+  },
+};
 
+export default function HomePage() {
+  const featuredArticles = articles.slice(0, 2);
 
-
-export default function Home() {
   return (
-    <>
-      {/* ── HERO ─────────────────────────────────────────────── */}
-      <section
-        style={{
-          minHeight: "calc(100dvh - 60px)",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px",
-          display: "grid",
-          gridTemplateColumns: "3fr 2fr",
-          alignItems: "center",
-          gap: "48px",
-        }}
-        className="hero-grid"
-      >
-        {/* Left — text */}
-        <div>
-          <h1
-            style={{
-              fontFamily: "var(--font-fraunces), Georgia, serif",
-              fontSize: "clamp(2.1rem, 5vw, 3.6rem)",
-              fontWeight: 500,
-              lineHeight: 1.1,
-              letterSpacing: "-0.02em",
-              color: "var(--ink)",
-              marginBottom: "20px",
-            }}
-          >
-            Gurpreet Kaur Jodhka
+    <main>
+      {/* Eyebrow Tag Strip */}
+      <div className="tag-strip">
+        <span>Ludhiana, IN</span>
+        <span>MBA Candidate &middot; Deakin University, Ahmedabad</span>
+        <span>Open to Opportunities</span>
+      </div>
+
+      {/* HERO SECTION */}
+      <section className="hero" id="hero-section">
+        <div className="hero-inner">
+          <h1 className="hero-headline" id="hero-heading">
+            <span className="line"><span className="kern-data">PROOF</span> OVER</span>
+            <span className="line">PROMISE.</span>
+            <span className="line highlight">BUILDING BEFORE BUSINESS SCHOOL.</span>
           </h1>
 
-          {/* Tagline with sprig */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "40px" }}>
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "1rem",
-                fontWeight: 500,
-                textTransform: "uppercase",
-                letterSpacing: "2px",
-                color: "var(--ink)",
-                opacity: 0.7,
-              }}
-            >
-              Business Woman
-            </p>
-            <SprigLeaf color="#241C14" size={36} />
-          </div>
-
-          {/* Glimpse strip */}
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "1.05rem",
-              lineHeight: 1.7,
-              color: "var(--ink)",
-              opacity: 0.75,
-              maxWidth: "480px",
-              borderLeft: "2px solid var(--marigold)",
-              paddingLeft: "18px",
-            }}
-          >
-            Marketing grad who built a small business before business school —
-            now an MBA candidate at Deakin, Ahmedabad.
+          <p className="sub">
+            Marketing graduate who bootstrapped Guldasta to 100+ orders before business school &mdash; now building the strategic &amp; analytical layer as an MBA candidate at Deakin, Ahmedabad.
           </p>
-        </div>
 
-        {/* Right — portrait */}
-        <div
-          className="hero-portrait"
-          style={{
-            position: "relative",
-            width: "100%",
-            maxWidth: "340px",
-            justifySelf: "center",
-          }}
-        >
-          {/* Polaroid-style portrait */}
-          <div
-            style={{
-              background: "#fff",
-              padding: "10px 10px 32px",
-              boxShadow: "0 4px 24px rgba(36,28,20,0.14)",
-              transform: "rotate(-1.5deg)",
-            }}
-          >
-            <div style={{ position: "relative", width: "100%", aspectRatio: "3/4", overflow: "hidden" }}>
-              <Image
-                src="/gurpreet.jpeg"
-                alt="Gurpreet Kaur Jodhka — portrait"
-                fill
-                sizes="(max-width: 768px) 90vw, 340px"
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            </div>
+          <div className="hero-cta">
+            <Link className="btn btn-primary" href="/work/">
+              View Work
+            </Link>
+            <button type="button" className="btn btn-outline">
+              Let&apos;s Talk &rarr;
+            </button>
           </div>
-          {/* Caveat caption on polaroid */}
-          <p
-            style={{
-              fontFamily: "var(--font-caveat), cursive",
-              fontSize: "0.95rem",
-              color: "var(--ink)",
-              opacity: 0.5,
-              textAlign: "center",
-              marginTop: "10px",
-              transform: "rotate(-1deg)",
-            }}
-          >
-            Founder, Guldasta — 2026
-          </p>
         </div>
       </section>
 
-      {/* ── WORK TEASER ──────────────────────────────────────── */}
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "80px 24px",
-          borderTop: "1px solid var(--border)",
-        }}
-      >
-        <ScrollFadeUp>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.8rem",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              color: "var(--marigold)",
-              marginBottom: "24px",
-            }}
-          >
-            Featured Work
-          </p>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "40px",
-              alignItems: "center",
-            }}
-            className="work-teaser-grid"
-          >
-            {/* Photo */}
-            <div
-              style={{
-                background: "#fff",
-                padding: "8px 8px 24px",
-                boxShadow: "0 2px 16px rgba(36,28,20,0.1)",
-                transform: "rotate(1.5deg)",
-                transition: "transform 300ms cubic-bezier(0.16,1,0.3,1)",
-              }}
-              onMouseEnter={(e) =>
-                ((e.currentTarget as HTMLElement).style.transform = "rotate(1.5deg) scale(1.02)")
-              }
-              onMouseLeave={(e) =>
-                ((e.currentTarget as HTMLElement).style.transform = "rotate(1.5deg)")
-              }
-            >
-              <div style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}>
-                <Image
-                  src="/guldasta.jpg"
-                  alt="Guldasta — handcrafted velvet flower arrangement in marigold and pink"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  style={{ objectFit: "cover" }}
-                />
+      {/* SELECTED WORK */}
+      <section className="projects-section selected-work-section" id="projects-section">
+        <div className="container">
+          <div className="selected-work-header-row">
+            <h2 className="selected-work-display-title">SELECTED WORK</h2>
+            <span className="selected-work-badge">01 live &middot; 02 coming soon</span>
+          </div>
+
+          <div className="selected-work-list">
+            {/* Project 01 - Live */}
+            <Link href="/work/guldasta/" className="work-list-row">
+              <div className="work-list-num">01</div>
+              <div className="work-list-content">
+                <h3 className="work-list-title">Guldasta D2C Floral Venture</h3>
+                <div className="work-list-tags">D2C BRAND &middot; 100+ ORDERS &middot; KALA GALI FESTIVAL</div>
+              </div>
+            </Link>
+
+            {/* Project 02 - Coming Soon */}
+            <div className="work-list-row" style={{ cursor: 'default', opacity: 0.85 }}>
+              <div className="work-list-num">02</div>
+              <div className="work-list-content">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <h3 className="work-list-title">Market Research &amp; Consumer Insights</h3>
+                  <span
+                    style={{
+                      background: 'rgba(224, 122, 44, 0.12)',
+                      color: '#E07A2C',
+                      border: '1px solid #E07A2C',
+                      fontSize: '10px',
+                      fontWeight: 700,
+                      padding: '2px 8px',
+                      borderRadius: '999px',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    Coming Soon
+                  </span>
+                </div>
+                <div className="work-list-tags">CONSUMER BEHAVIOR &middot; SURVEY MODEL &middot; IN PROGRESS</div>
               </div>
             </div>
 
-            {/* Text */}
-            <div>
-              <h2
-                style={{
-                  fontFamily: "var(--font-fraunces), Georgia, serif",
-                  fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  marginBottom: "12px",
-                }}
-              >
-                Guldasta
-              </h2>
-              <p
-                style={{
-                  fontFamily: "var(--font-caveat), cursive",
-                  fontSize: "1rem",
-                  color: "var(--marigold)",
-                  marginBottom: "16px",
-                }}
-              >
-                a 6-month experiment
+            {/* Project 03 - Not Built Yet */}
+            <div className="work-list-row" style={{ cursor: 'default', opacity: 0.85 }}>
+              <div className="work-list-num">03</div>
+              <div className="work-list-content">
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <h3 className="work-list-title">Campus Operations &amp; Event Logistics</h3>
+                  <span
+                    style={{
+                      background: 'rgba(12, 13, 14, 0.08)',
+                      color: '#505356',
+                      border: '1px solid #0C0D0E',
+                      fontSize: '10px',
+                      fontWeight: 700,
+                      padding: '2px 8px',
+                      borderRadius: '999px',
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    Not Built Yet
+                  </span>
+                </div>
+                <div className="work-list-tags">METTLE FESTIVAL &middot; 1000+ ATTENDEES &middot; FLOW PLANNING</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES I PROVIDE SECTION */}
+      <section className="what-i-do what-i-do-section services-section" id="services-section">
+        <div className="container">
+          <div className="section-header-left">
+            <h2 className="section-title section-title--large">What I bring to teams</h2>
+            <p className="section-intro-bold">
+              I combine entrepreneurial execution with commercial marketing and structured business analytics.
+            </p>
+          </div>
+
+          <div className="what-i-do-grid">
+            {/* Service 1 */}
+            <div className="feature-item">
+              <div className="service-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+              </div>
+              <div className="feature-title">1. Brand Strategy &amp; D2C Launch</div>
+              <p className="feature-desc">
+                From 0 to 1 consumer validation: pricing unit economics, custom packaging, visual identity, and social community engagement built through self-funded grit.
               </p>
-              <p
-                style={{
-                  fontSize: "0.95rem",
-                  lineHeight: 1.7,
-                  color: "var(--ink)",
-                  opacity: 0.75,
-                  marginBottom: "24px",
-                  maxWidth: "380px",
-                }}
-              >
-                A self-funded handcrafted flower startup — 100+ orders,
-                ₹10k+ revenue, and a festival feature at Kala Gali, Ludhiana.
+              <Link href="/work/guldasta/" className="service-case-link">
+                View Guldasta Story &rarr;
+              </Link>
+            </div>
+
+            {/* Service 2 */}
+            <div className="feature-item">
+              <div className="service-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div className="feature-title">2. Event Operations &amp; Flow</div>
+              <p className="feature-desc">
+                Coordinating on-ground logistics, inter-college outreach, and crowd flow for 1,000+ attendee university ceremonies and flagship competitions without friction.
               </p>
-              <Link
-                href="/work"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.88rem",
-                  fontWeight: 500,
-                  color: "var(--ink)",
-                  borderBottom: "1.5px solid var(--marigold)",
-                  paddingBottom: "2px",
-                  transition: "color 150ms ease",
-                }}
-              >
-                See the full story <ArrowRight size={14} weight="bold" />
+              <Link href="/about/" className="service-case-link">
+                View Leadership Experience &rarr;
+              </Link>
+            </div>
+
+            {/* Service 3 */}
+            <div className="feature-item">
+              <div className="service-card-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div className="feature-title">3. Market Research &amp; Analytics</div>
+              <p className="feature-desc">
+                Synthesizing qualitative customer feedback with Excel data models and market sizing to uncover genuine buyer motivation and product-market fit.
+              </p>
+              <Link href="/about/" className="service-case-link">
+                View Skills &amp; Academic Focus &rarr;
               </Link>
             </div>
           </div>
-        </ScrollFadeUp>
-      </section>
 
-      {/* ── ABOUT TEASER ─────────────────────────────────────── */}
-      <section
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 24px 80px",
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr",
-          gap: "48px",
-          alignItems: "center",
-          borderTop: "1px solid var(--border)",
-          paddingTop: "60px",
-        }}
-        className="about-teaser-grid"
-      >
-        <ScrollFadeUp delay={50}>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.8rem",
-              fontWeight: 500,
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              color: "var(--forest)",
-              marginBottom: "16px",
-            }}
-          >
-            About
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "1.05rem",
-              lineHeight: 1.7,
-              color: "var(--ink)",
-              opacity: 0.8,
-              maxWidth: "520px",
-              marginBottom: "28px",
-            }}
-          >
-            I studied marketing at S.A.C.C.M under Panjab University, then
-            co-founded Guldasta — a handcrafted velvet flower brand — before
-            moving into an MBA at Deakin, Ahmedabad. The business taught me
-            more than any classroom did.
-          </p>
-          <Link
-            href="/about"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              fontFamily: "var(--font-body)",
-              fontSize: "0.88rem",
-              fontWeight: 500,
-              color: "var(--ink)",
-              borderBottom: "1.5px solid var(--forest)",
-              paddingBottom: "2px",
-            }}
-          >
-            Read more <ArrowRight size={14} weight="bold" />
-          </Link>
-        </ScrollFadeUp>
-
-        {/* Thumbnail */}
-        <ScrollFadeUp delay={100}>
-          <div
-            style={{
-              background: "#fff",
-              padding: "8px 8px 20px",
-              boxShadow: "0 2px 12px rgba(36,28,20,0.1)",
-              transform: "rotate(-2deg)",
-              maxWidth: "200px",
-            }}
-          >
-            <div style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden" }}>
-              <Image
-                src="/gurpreet.jpeg"
-                alt="Gurpreet Kaur Jodhka"
-                fill
-                sizes="200px"
-                style={{ objectFit: "cover" }}
-              />
-            </div>
+          <div className="services-cta-wrap">
+            <button type="button" className="btn btn-primary services-hover-btn" id="services-cta-btn">
+              <span className="btn-text-default">Let&apos;s talk about collaboration &rarr;</span>
+              <span className="btn-text-hover">Get in Touch</span>
+            </button>
           </div>
-        </ScrollFadeUp>
+        </div>
       </section>
 
-      {/* ── FOOTER CTA ───────────────────────────────────────── */}
-      <section
-        style={{
-          backgroundColor: "var(--ink)",
-          color: "var(--bg)",
-          padding: "72px 24px",
-          textAlign: "center",
-        }}
-      >
-        <ScrollFadeUp>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "0.8rem",
-              textTransform: "uppercase",
-              letterSpacing: "2px",
-              opacity: 0.5,
-              marginBottom: "16px",
-              color: "var(--bg)",
-            }}
-          >
-            Let&apos;s connect
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-fraunces), Georgia, serif",
-              fontSize: "clamp(1.8rem, 4vw, 3rem)",
-              fontWeight: 500,
-              color: "var(--bg)",
-              lineHeight: 1.2,
-              marginBottom: "28px",
-            }}
-          >
-            Let&apos;s talk.
-          </h2>
-          <Link
-            href="/contact"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "10px",
-              fontFamily: "var(--font-body)",
-              fontSize: "0.9rem",
-              fontWeight: 500,
-              color: "var(--marigold)",
-              border: "1.5px solid var(--marigold)",
-              padding: "12px 28px",
-              borderRadius: "3px",
-              letterSpacing: "0.04em",
-              transition: "background-color 150ms ease, color 150ms ease",
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget as HTMLElement;
-              el.style.backgroundColor = "var(--marigold)";
-              el.style.color = "var(--ink)";
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget as HTMLElement;
-              el.style.backgroundColor = "transparent";
-              el.style.color = "var(--marigold)";
-            }}
-          >
-            Get in touch <ArrowRight size={14} weight="bold" />
-          </Link>
-        </ScrollFadeUp>
-      </section>
+      {/* BLOG / LATEST ARTICLES SECTION */}
+      <section className="writing-section" id="writing-preview-section">
+        <div className="container">
+          <div className="section-header-left">
+            <h2 className="section-title section-title--large">Blog &amp; Articles</h2>
+            <p className="section-intro-bold">
+              Lessons from bootstrapping a startup, commercial marketing, and business analytics.
+            </p>
+          </div>
 
-      {/* Responsive overrides */}
-      <style>{`
-        @media (max-width: 768px) {
-          .hero-grid {
-            grid-template-columns: 1fr !important;
-            padding-top: 48px !important;
-            padding-bottom: 48px !important;
-            min-height: unset !important;
-            text-align: center;
-          }
-          .hero-portrait {
-            justify-self: center !important;
-            max-width: 260px !important;
-          }
-          .work-teaser-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .about-teaser-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
-    </>
+          <div className="pudding-grid">
+            {featuredArticles.map((art) => (
+              <Link
+                key={art.slug}
+                href={`/writing/${art.slug}/`}
+                className="pudding-card pudding-card-link"
+              >
+                <div className="pudding-meta">
+                  <span className="pudding-pill">{art.num}</span>
+                  <span className="pudding-date">{art.date}</span>
+                </div>
+                <div className={`pudding-frame pudding-frame--${art.frameColor}`}>
+                  <div className="pudding-inner-graphic">
+                    <div className="pudding-card-type">{art.type}</div>
+                    <div className="pudding-card-source">{art.source}</div>
+                  </div>
+                </div>
+                <h3 className="pudding-title">{art.title}</h3>
+                <p className="pudding-desc">{art.description}</p>
+                <span className="read-post-tag">Read Full Post &rarr;</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

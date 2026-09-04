@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="160" height="34" fill="none">
+  <!-- GURPREET Wordmark Typography -->
+  <text x="0" y="34" font-family="'Clash Display', 'Inter', sans-serif" font-size="28" font-weight="900" letter-spacing="-0.03em" fill="#0C0D0E">GURPREET</text>
+  
+  <!-- Accent Line & Node -->
+  <path d="M165 34 L180 20 L195 26 L218 10 L224 16 M218 10 L226 10 L226 18" stroke="#E07A2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="180" cy="20" r="2.5" fill="#E07A2C"/>
+  <circle cx="195" cy="26" r="2.5" fill="#E07A2C"/>
+  <circle cx="218" cy="10" r="3" fill="#E07A2C"/>
+</svg>

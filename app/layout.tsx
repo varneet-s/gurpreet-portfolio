@@ -1,44 +1,44 @@
-import type { Metadata } from "next";
-import { Fraunces, Outfit, Caveat } from "next/font/google";
-import "./globals.css";
-import Nav from "@/components/Nav";
-import Footer from "@/components/Footer";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-caveat",
-  display: "swap",
-});
+import type { Metadata } from 'next';
+import './globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gurpreetjodhka.com'),
   title: {
-    default: "Gurpreet Kaur Jodhka | Business Woman",
-    template: "%s — Gurpreet Kaur Jodhka",
+    default: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    template: '%s | Gurpreet Kaur Jodhka',
   },
   description:
-    "Marketing grad and MBA candidate at Deakin, Ahmedabad — founder of Guldasta, a handcrafted velvet flower brand.",
-  metadataBase: new URL("https://gurpreetjodhka.com"),
-  openGraph: {
-    type: "website",
-    siteName: "Gurpreet Kaur Jodhka",
-    images: [{ url: "/og/home.jpg", width: 1200, height: 630 }],
+    'Gurpreet Kaur Jodhka — MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
+  icons: {
+    icon: '/assets/logo-wordmark.svg',
   },
-  twitter: { card: "summary_large_image" },
+  openGraph: {
+    title: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    description:
+      'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
+    url: 'https://gurpreetjodhka.com',
+    siteName: 'Gurpreet Kaur Jodhka Portfolio',
+    images: [
+      {
+        url: '/gurpreet.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Gurpreet Kaur Jodhka',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gurpreet Kaur Jodhka — MBA & Marketing',
+    description:
+      'MBA Candidate at Deakin University, Ahmedabad. Former founder of Guldasta, marketing graduate from S.A.C.C.M, Panjab University.',
+    images: ['/gurpreet.jpeg'],
+  },
 };
 
 export default function RootLayout({
@@ -47,23 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${outfit.variable} ${caveat.variable}`}>
-      <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <meta name="theme-color" content="#F6F1E4" />
-        {/* Anti-flash: apply theme before React hydrates */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&p)){document.documentElement.classList.add('dark')}}catch(e){}})()`,
-          }}
-        />
-      </head>
-      <body style={{ transition: "background-color 200ms ease, color 200ms ease" }}>
-        <Nav />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en">
+      <body className="page-body">
+        <div id="root">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+        <ScrollReveal />
       </body>
     </html>
   );

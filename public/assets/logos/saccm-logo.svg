@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="none">
+  <rect width="100" height="100" rx="16" fill="#6A1A24" />
+  <!-- Shield Crest -->
+  <path d="M50 18 L76 26 V52 C76 68 50 82 50 82 C50 82 24 68 24 52 V26 Z" fill="#801C2E" stroke="#E6C687" stroke-width="2.5" />
+  <!-- Open Book / Commerce Torch Symbol -->
+  <path d="M36 46 C42 43 48 45 50 48 C52 45 58 43 64 46 V62 C58 59 52 61 50 64 C48 61 42 59 36 62 Z" fill="#E6C687" />
+  <line x1="50" y1="48" x2="50" y2="64" stroke="#801C2E" stroke-width="1.5" />
+  <!-- Star of Excellence -->
+  <polygon points="50,28 52,34 58,34 53,38 55,44 50,40 45,44 47,38 42,34 48,34" fill="#FFD700" />
+</svg>
